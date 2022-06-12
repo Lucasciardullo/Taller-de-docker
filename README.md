@@ -1,1 +1,0 @@
-Docker y kubernetes pruevbav
