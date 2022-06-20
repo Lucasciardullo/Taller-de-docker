@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+RUN mkdir /home/example/
+COPY ./passwordapi.jar /home/example/
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jdk && \
+    apt-get install -y ant && \
+    apt-get clean;
+CMD ["java", "-jar", "/home/example/passwordapi.jar"]
