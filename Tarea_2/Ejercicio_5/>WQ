@@ -1,0 +1,6 @@
+Con healthcheck podemos ves la salud de los contenedores, este se puede declarar en el docker file o en el docker run
+Con onbuild podemos agregar lineas que seran ejecutadas mas tardes cuando la imagen sea utilizada como base para otra
+Con docker volume podemos:
+ Transferir datos a un contenedor de Docker
+ Guardar los datos de un contenedor de Docker
+ Intercambiar datos entre contenedores de Docke
