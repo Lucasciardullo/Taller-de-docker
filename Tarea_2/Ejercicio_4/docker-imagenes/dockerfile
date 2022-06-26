@@ -1,12 +1,12 @@
-FROM ubuntu:latest
+FROM openjdk:8-jre-alpine
+
+RUN addgroup -S appgroup && adduser -S Lucas -G appgroup
 
 RUN mkdir /home/example/
 COPY ./passwordapi.jar /home/example/
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    rm -rf /var/lib/apt/lists/*
-RUN apt-get update && \
-    apt-get install -y openjdk-8-jdk && \
-    apt-get install -y ant && \
-    apt-get clean;
+
+EXPOSE 8080
+
+USER Lucas
+
 CMD ["java", "-jar", "/home/example/passwordapi.jar"]
