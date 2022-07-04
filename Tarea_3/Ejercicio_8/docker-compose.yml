@@ -1,0 +1,13 @@
+ejer_8:
+  image: nicopaez/password-api:latest
+  ports:
+    - "3002:3000"
+  expose:
+    - 3000
+
+ejer_8_bis:
+  image: nicopaez/password-api:2.1.0
+  ports:
+    - "3001:3000"
+  expose:
+    - 3000      
